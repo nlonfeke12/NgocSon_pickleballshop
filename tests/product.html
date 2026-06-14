@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <img id="image" width="300">
+
+    <h1 id="name"></h1>
+
+    <h2 id="price"></h2>
+
+
+
+    <script type="module">
+
+        import { db }
+        from "./firebase-config.js";
+
+        import {
+            doc,
+            getDoc
+        }
+        from
+        "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+
+
+        // GET ID FROM URL
+
+        const params =
+        new URLSearchParams(
+            window.location.search
+        );
+
+        const productId =
+        params.get("id");
+
+
+
+        // LOAD PRODUCT
+
+        async function loadProduct(){
+
+            const productRef =
+            doc(db, "products", productId);
+
+            const productSnap =
+            await getDoc(productRef);
+
+            const product =
+            productSnap.data();
+
+
+
+            document.getElementById(
+                "image"
+            ).src = product.image;
+
+            document.getElementById(
+                "name"
+            ).innerText = product.name;
+
+            document.getElementById(
+                "price"
+            ).innerText =
+            "$" + product.price;
+        }
+
+        loadProduct();
+
+    </script>
+
+</body>
+
+</html>
