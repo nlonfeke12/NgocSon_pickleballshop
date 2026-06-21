@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="admin-text" style="display:none">
+    Admin
+</h2>
+
+<h2 id="guest-text" style="display:none">
+    Guest
+</h2>
+<input type="email" id="email">
+<button onclick="checkRole()">Register</button>
+
+<script>
+   function checkRole(){
+
+    const email =
+    document.getElementById("email").value;
+
+    if(email === "admin123@gmail.com"){
+
+        document.getElementById(
+            "admin-text"
+        ).style.display = "block";
+
+        document.getElementById(
+            "guest-text"
+        ).style.display = "none";
+
+    }else{
+
+        document.getElementById(
+            "admin-text"
+        ).style.display = "none";
+
+        document.getElementById(
+            "guest-text"
+        ).style.display = "block";
+
+    }
+}
+</script>
+</body>
+</html>

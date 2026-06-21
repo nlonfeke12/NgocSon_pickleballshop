@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Role Example</title>
+</head>
+<body>
+
+<input type="email" id="email" placeholder="Email">
+<br><br>
+
+<input type="password" id="password" placeholder="Password">
+<br><br>
+
+<button onclick="register()">
+    Register
+</button>
+
+<script>
+
+function register(){
+
+    const email =
+    document.getElementById("email").value;
+
+    const password =
+    document.getElementById("password").value;
+
+    if(email === "admin123@gmail.com"){
+
+        alert(
+            "Welcome Admin!\n" +
+            "Email: " + email +
+            "\nRole: Admin"
+        );
+
+    }else{
+
+        alert(
+            "Welcome Guest!\n" +
+            "Email: " + email +
+            "\nRole: Guest"
+        );
+
+    }
+}
+
+</script>
+
+</body>
+</html>
