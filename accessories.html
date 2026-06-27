@@ -1,0 +1,1127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags: offensive</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .quantity-box {
+            display: inline-flex;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .qty-btn {
+            width: 36px;
+            height: 36px;
+            border: none;
+            background: #f5f5f5;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .qty-btn:hover {
+            background: #e5e5e5;
+        }
+
+        .qty-input {
+            width: 48px;
+            height: 36px;
+            border: none;
+            border-left: 1px solid #ccc;
+            border-right: 1px solid #ccc;
+            text-align: center;
+            font-size: 16px;
+            outline: none;
+        }
+
+        /* Hide browser arrows */
+        .qty-input::-webkit-outer-spin-button,
+        .qty-input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        .qty-input {
+            appearance: textfield;
+        }
+
+        .card {
+            height: 512px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./home.html"><img style="width: 180px;height: 45px;"
+                    src="https://pickleballshop.vn/wp-content/uploads/2024/10/logo-pickleball-full-color-1024x257.png"></img></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown" style="margin: 0 10px 0 10px; font-size: larger; color: black;">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Paddles
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./offensive.html">Offensive</a></li>
+                            <li><a class="dropdown-item" href="./defensive.html">Defensive</a></li>
+                            <li><a class="dropdown-item" href="./balanced.html">Balanced</a></li>
+                        </ul>
+                    </li>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item dropdown"
+                                style="margin: 0 10px 0 10px; font-size: larger; color: black;">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Balls
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./outdoor.html">Outdoor Pickleballs</a></li>
+                                    <li><a class="dropdown-item" href="./indoor.html">Indoor Pickleballs</a></li>
+                                    <li><a class="dropdown-item" href="./practice.html">Practice Pickleballs</a></li>
+                                    <li><a class="dropdown-item" href="./competition.html">Competition Pickleballs</a></li>
+                                </ul>
+                            </li>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./accessories.html"
+                                            style="margin: 0 10px 0 10px; font-size: larger;">Accessories</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./brand.html"
+                                            style="margin: 0 10px 0 10px; font-size: larger;">Brands</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./news.html"
+                                            style="margin: 0 10px 0 10px; font-size: larger;">New</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link active" aria-current="page" href="./t&s.html"
+                                            style="margin: 0 10px 0 10px; font-size: larger;">Techniques</a>
+                                    </li>
+                                </ul>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search"
+                                        placeholder="Enter keywords to search..." aria-label="Search"
+                                        style="width: 280px;" />
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form>
+
+                                <img id="account-btn" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
+                                    style="margin-left:32px ;width:45px;cursor:pointer;">
+
+                            </div>
+                    </div>
+    </nav>
+
+    <h2 style="margin: 30px 0 0 35px;">PICKLEBALL PADDLES</h2>
+    <div class="best-seller-cards" style="display: grid;grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));gap: 30px;padding: 30px;">
+        <section class="card-temp-container1">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8286/42362/NOX108_Sling_Backpack_01__96240.1778083032.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">NOX Pickleball Sling Backpack</h5>
+                    <p class="card-text">$55.55</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal1">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 50px 50px 50px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8286/42362/NOX108_Sling_Backpack_01__96240.1778083032.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">NOX Pickleball Sling Backpack</h4>
+                                            <h5>$55.55</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: control, power.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease1()">−</button>
+
+                                            <input type="number" id="quantity1" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase1()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('NOX Pickleball Sling Backpack', 55.55, Number(document.getElementById('quantity1').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('bag1')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container2">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8271/42071/oktoRec-blackblue-front__37894.1777321183.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">OKTO Rec Lite Sport Backpack</h5>
+                    <p class="card-text">$165.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal2">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8271/42071/oktoRec-blackblue-front__37894.1777321183.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">OKTO Rec Lite Sport Backpack
+                                            </h4>
+                                            <h5>$165.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: spin, power, control.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease2()">−</button>
+
+                                            <input type="number" id="quantity2" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase2()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('OKTO Rec Lite Sport Backpack', 165.99, Number(document.getElementById('quantity2').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('bag2')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container3">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8225/41865/Warping_Point_Pro_Team_Pickleball_Bag_01__34005.1776096930.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Warping Point Pro Team Pickleball Bag</h5>
+                    <p class="card-text" style="margin-bottom: 40px;">$119.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal3">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8225/41865/Warping_Point_Pro_Team_Pickleball_Bag_01__34005.1776096930.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">Warping Point Pro Team Pickleball Bag
+                                            </h4>
+                                            <h5>$119.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: weight, power,
+                                                design.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease3()">−</button>
+
+                                            <input type="number" id="quantity3" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase3()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('Warping Point Pro Team Pickleball Bag', 119.99, Number(document.getElementById('quantity3').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('bag3')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container4">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/5736/29938/TIT101_One_1_1000__57362.1714080084.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Titan ONE Pickleball Machine</h5>
+                    <p class="card-text">$2,049.19</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal4">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/5736/29938/TIT101_One_1_1000__57362.1714080084.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">Titan ONE Pickleball Machine
+                                            </h4>
+                                            <h5>$2,049.19</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: power, control,
+                                                color.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease4()">−</button>
+
+                                            <input type="number" id="quantity4" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase4()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('Titan ONE Pickleball Machine', 2049.19, Number(document.getElementById('quantity4').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('machine1')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container5">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/6407/33723/EPB100_Pickleball-Machine_Black_1_1000__26827.1771434877.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">ERNE Pickleball Machine</h5>
+                    <p class="card-text" style="margin-bottom: 16px;">$1,999.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal5">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/6407/33723/EPB100_Pickleball-Machine_Black_1_1000__26827.1771434877.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">ERNE Pickleball Machine</h4>
+                                            <h5>$1999.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: machine, titan.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease5()">−</button>
+
+                                            <input type="number" id="quantity5" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase5()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('ERNE Pickleball Machine', 1999.99, Number(document.getElementById('quantity5').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('machine2')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container6">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/attribute_rule_images/525_source_1666035134.jpg"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Pickleball Tutor Spin AC (Plug-In Only), Oscillating</h5>
+                    <p class="card-text">$1,149.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal6">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 50px 50px 50px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/attribute_rule_images/525_source_1666035134.jpg"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">Pickleball Tutor Spin AC (Plug-In Only), Oscillating</h4>
+                                            <h5>$1,149.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: color, design, power.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease6()">−</button>
+
+                                            <input type="number" id="quantity6" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase6()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('Pickleball Tutor Spin AC (Plug-In Only), Oscillating', 1149.99, Number(document.getElementById('quantity6').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('machine3')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container7">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/420/18931/SwiftNet_1_1000__03603.1675873755.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">SwiftNet 2.1 Portable Pickleball Net System</h5>
+                    <p class="card-text">$369.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal7">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/420/18931/SwiftNet_1_1000__03603.1675873755.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">SwiftNet 2.1 Portable Pickleball Net System
+                                            </h4>
+                                            <h5>$369.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: price, play,
+                                                color.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease7()">−</button>
+
+                                            <input type="number" id="quantity7" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase7()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('SwiftNet 2.1 Portable Pickleball Net System', 369.99, Number(document.getElementById('quantity7').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('net1')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container8">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/281/7107/PBC555-2__45378.1663784833.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Rally Deluxe Portable Net System</h5>
+                    <p class="card-text" style="margin-bottom: 16px;">$142.46</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal8">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/281/7107/PBC555-2__45378.1663784833.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">Rally Deluxe Portable Net System
+                                            </h4>
+                                            <h5>$142.46</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: width, power,
+                                                design.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease8()">−</button>
+
+                                            <input type="number" id="quantity8" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase8()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('Rally Deluxe Portable Net System', 142.46, Number(document.getElementById('quantity8').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('net2')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container9">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/1583/24836/Franklin-Pickleball-Portable-Net-System-1__79444.1702318523.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Franklin Portable Pickleball Net System with Wheels</h5>
+                    <p class="card-text">$129.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal9">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/1583/24836/Franklin-Pickleball-Portable-Net-System-1__79444.1702318523.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">Franklin Portable Pickleball Net System with Wheels
+                                            </h4>
+                                            <h5>$129.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: fit, feel,
+                                                control.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease9()">−</button>
+
+                                            <input type="number" id="quantity9" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase9()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('Franklin Portable Pickleball Net System with Wheels', 129.99, Number(document.getElementById('quantity9').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('net3')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container10">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/1231/41698/96563-503-original__47211.1774643764.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">K-Swiss Women's Express Light Pickleball Shoes</h5>
+                    <p class="card-text" style="margin-bottom: 16px;">$115.19</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal10">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal10" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/1231/41698/96563-503-original__47211.1774643764.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">K-Swiss Women's Express Light Pickleball Shoes</h4>
+                                            <h5>$115.19</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: light, weight, all-court.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease10()">−</button>
+
+                                            <input type="number" id="quantity10" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase10()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('K-Swiss Women's Express Light Pickleball Shoes', 115.19, Number(document.getElementById('quantity10').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('shoe1')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container11">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8385/43243/SEL1324_CourtStrike_3_-_Womens_-_Black_03__45402.1782494962.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Selkirk CourtStrike Pro 3.0 Pickleball Shoe - Women's - Black</h5>
+                    <p class="card-text" style="margin-bottom: 40px;">$127.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal11">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal11" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 50px 50px 50px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8385/43243/SEL1324_CourtStrike_3_-_Womens_-_Black_03__45402.1782494962.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">Selkirk CourtStrike Pro 3.0 Pickleball Shoe - Women's - Black</h4>
+                                            <h5>$127.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: control, power, style.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease11()">−</button>
+
+                                            <input type="number" id="quantity11" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase11()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('Selkirk CourtStrike Pro 3.0 Pickleball Shoe - Women's - Black', 127.99, Number(document.getElementById('quantity11').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('shoe2')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+        <section class="card-temp-container12">
+            <div class="card" style="width: 250px;">
+                <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8347/42846/JOM104_Electric_Womens_White_01__64079.1781630370.jpg?c=1"
+                    class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">JOMA Electric Court Shoe - Women's - White</h5>
+                    <p class="card-text">$129.99</p>
+                    <a class="btn btn-primary"><!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal12">
+                            QUICK VIEW
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal12" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content"
+                                    style="width: 1000px;justify-self: center;align-self: center;">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body"
+                                        style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 100px 50px 100px;">
+                                        <img style="width: 200px;height: 200px;"
+                                            src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/640w/products/8347/42846/JOM104_Electric_Womens_White_01__64079.1781630370.jpg?c=1"
+                                            alt="">
+                                        <div class="quick-view-description">
+                                            <h4 style="font-weight: 450;">JOMA Electric Court Shoe - Women's - White
+                                            </h4>
+                                            <h5>$129.99</h5>
+                                            <h5 style="font-weight: 400;">Highly rated by customers for: price, play,
+                                                color.
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="quantity-box">
+                                            <button class="qty-btn" onclick="decrease12()">−</button>
+
+                                            <input type="number" id="quantity12" class="qty-input" value="1" min="1">
+
+                                            <button class="qty-btn" onclick="increase12()">+</button>
+                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="addToCart('JOMA Electric Court Shoe - Women's - White', 129.99, Number(document.getElementById('quantity12').value))">ADD
+                                            TO CART</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <button onclick="goToProduct('shoe3')"
+                        style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                        DETAILS</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="footer"
+        style="border-top: 1px solid white; background-color: black; color: white; display: flex; flex-direction: row; justify-content: space-between; align-items: center;padding: 10px;">
+        <h6>© Copyright 2026 PickleballCentral.com. All Rights Reserved.</h6>
+        <h6><a href="">Website Accessibility</a></h6>
+        <h6><a href="">Terms & Conditions</a></h6>
+        <h6><a href="">Privacy Policy</a></h6>
+    </div>
+
+
+
+    <script type="module" src="./firebase-config.js"></script>
+    <script type="module">
+
+        window.increase1 = function () {
+            const input = document.getElementById("quantity1");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease1 = function () {
+            const input = document.getElementById("quantity1");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase2 = function () {
+            const input = document.getElementById("quantity2");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease2 = function () {
+            const input = document.getElementById("quantity2");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase3 = function () {
+            const input = document.getElementById("quantity3");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease3 = function () {
+            const input = document.getElementById("quantity3");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase4 = function () {
+            const input = document.getElementById("quantity4");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease4 = function () {
+            const input = document.getElementById("quantity4");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase5 = function () {
+            const input = document.getElementById("quantity5");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease5 = function () {
+            const input = document.getElementById("quantity5");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase6 = function () {
+            const input = document.getElementById("quantity6");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease6 = function () {
+            const input = document.getElementById("quantity6");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase7 = function () {
+            const input = document.getElementById("quantity7");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease7 = function () {
+            const input = document.getElementById("quantity7");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase8 = function () {
+            const input = document.getElementById("quantity8");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease8 = function () {
+            const input = document.getElementById("quantity8");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase9 = function () {
+            const input = document.getElementById("quantity9");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease9 = function () {
+            const input = document.getElementById("quantity9");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase10 = function () {
+            const input = document.getElementById("quantity10");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease10 = function () {
+            const input = document.getElementById("quantity10");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase11 = function () {
+            const input = document.getElementById("quantity11");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease11 = function () {
+            const input = document.getElementById("quantity11");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+        window.increase12 = function () {
+            const input = document.getElementById("quantity12");
+            input.value = Number(input.value) + 1;
+        }
+
+        window.decrease12 = function () {
+            const input = document.getElementById("quantity12");
+
+            if (Number(input.value) > 1) {
+                input.value = Number(input.value) - 1;
+            }
+        }
+
+        import { db } from "./firebase-config.js";
+        import {
+            collection,
+            addDoc,
+            getDocs,
+            getDoc,
+            doc
+        } from
+            "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+        window.addToCart = async function (name, price, quantity) {
+
+            try {
+
+                await addDoc(collection(db, "cart"), {
+
+                    productName: name,
+                    price: price,
+                    quantity: quantity
+                });
+
+                alert("Added to cart!");
+
+            } catch (error) {
+
+                alert(error);
+
+            }
+        }
+
+        import { auth }
+            from "./firebase-config.js";
+
+        import {
+            onAuthStateChanged
+        }
+            from "https://www.gstatic.com/firebasejs/12.12.0/firebase-auth.js";
+
+        const accountBtn =
+            document.getElementById("account-btn");
+
+        let currentUser = null;
+
+        onAuthStateChanged(auth, (user) => {
+
+            if (user) {
+
+                currentUser = user;
+
+            } else {
+
+                currentUser = null;
+            }
+        });
+
+        accountBtn.onclick = function () {
+
+            if (currentUser) {
+
+                // alert(
+                //     "Logged in as: " +
+                //     currentUser.email
+                // );
+                window.location.href = "./account.html"
+
+            } else {
+
+                window.location.href =
+                    "./register.html";
+            }
+        }
+
+        const params =
+            new URLSearchParams(
+                window.location.search
+            );
+
+        const productId =
+            params.get("id");
+
+        async function loadProduct() {
+
+            const productRef =
+                doc(db, "products", productId);
+
+            const productSnap =
+                await getDoc(productRef);
+
+            const product =
+                productSnap.data();
+
+
+
+            document.getElementById(
+                "image"
+            ).src = product.image;
+
+            document.getElementById(
+                "name"
+            ).innerText = product.name;
+
+            document.getElementById(
+                "price"
+            ).innerText =
+                "$" + product.price;
+        }
+
+        loadProduct();
+
+    </script>
+    <script>
+        function goToProduct(id) {
+            window.location.href =
+                `product.html?id=${id}`;
+        }
+    </script>
+</body>
+
+</html>
