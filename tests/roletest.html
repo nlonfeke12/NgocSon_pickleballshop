@@ -1,50 +1,111 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Role Example</title>
-</head>
-<body>
+<section class="card-temp-container1">
+    <div class="card" style="width: 250px;">
+        <img src="${product.image}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">${product.name}</h5>
+            <p class="card-text">$${product.price}</p>
+            <a class="btn btn-primary"><!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                    QUICK VIEW
+                </button>
 
-<input type="email" id="email" placeholder="Email">
-<br><br>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content" style="width: 1000px;justify-self: center;align-self: center;">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Quick View</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body"
+                                style="display: flex;flex-direction: row;justify-content: space-between;align-items: center;padding: 50px 50px 50px 50px;">
+                                <img style="width: 200px;height: 200px;" src="${product.image}" alt="">
+                                <div class="quick-view-description">
+                                    <h4 style="font-weight: 450;">${product.name}</h4>
+                                    <h5>$${product.price}</h5>
+                                    <h5 style="font-weight: 400;">Highly rated by customers for: control, power.
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <div class="quantity-box">
 
-<input type="password" id="password" placeholder="Password">
-<br><br>
+                                    <button onclick="decrease('qty-${docSnap.id}')">
+                                        −
+                                    </button>
 
-<button onclick="register()">
-    Register
-</button>
+                                    <input id="qty-${docSnap.id}" type="number" value="1" min="1">
 
-<script>
+                                    <button onclick="increase('qty-${docSnap.id}')">
+                                        +
+                                    </button>
 
-function register(){
+                                </div>
 
-    const email =
-    document.getElementById("email").value;
+                                <button onclick="
+                addToCart(
+                    '${product.name}',
+                    ${product.price},
+                    Number(
+                        document.getElementById(
+                            'qty-${docSnap.id}'
+                        ).value
+                    )
+                )
+                ">
+                                    Add To Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <button onclick="goToProduct('paddle1')"
+                style="color: white;background-color: rgb(13,110,253); border-radius: 7px; padding: 12px 20px; border: 1px solid rgb(13,110,253); margin-top: 10px;">VIEW
+                DETAILS</button>
+        </div>
+    </div>
+</section>
 
-    const password =
-    document.getElementById("password").value;
 
-    if(email === "admin123@gmail.com"){
+<div class="product-card">
 
-        alert(
-            "Welcome Admin!\n" +
-            "Email: " + email +
-            "\nRole: Admin"
-        );
+    <img src="${product.image}" width="120">
 
-    }else{
+    <h3>${product.name}</h3>
 
-        alert(
-            "Welcome Guest!\n" +
-            "Email: " + email +
-            "\nRole: Guest"
-        );
+    <p>$${product.price}</p>
 
-    }
-}
+    <div class="quantity-box">
 
-</script>
+        <button onclick="decrease('qty-${docSnap.id}')">
+            −
+        </button>
 
-</body>
-</html>
+        <input id="qty-${docSnap.id}" type="number" value="1" min="1">
+
+        <button onclick="increase('qty-${docSnap.id}')">
+            +
+        </button>
+
+    </div>
+
+    <br>
+
+    <button onclick="
+                addToCart(
+                    '${product.name}',
+                    ${product.price},
+                    Number(
+                        document.getElementById(
+                            'qty-${docSnap.id}'
+                        ).value
+                    )
+                )
+                ">
+        Add To Cart
+    </button>
+
+</div>
