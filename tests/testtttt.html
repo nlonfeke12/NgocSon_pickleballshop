@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #results {
+            width: 300px;
+        }
+
+        .result-card {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <input type="text" id="search" placeholder="Search products...">
+
+    <br><br>
+
+    <div id="results"></div>
+
+    <script src="./firebase-config.js" type="module"></script>
+
+
+    <script type="module">
+        import { db } from "./firebase-config.js";
+        import {
+            collection,
+            addDoc,
+            getDocs,
+            getDoc,
+            doc
+        } from
+            "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+        const documents = [];
+
+        const snapshot = await getDocs(collection(db, "products"));
+
+        snapshot.forEach(doc => {
+
+            documents.push(doc.data());
+
+        });
+
+        const search = document.getElementById("search");
+
+        search.addEventListener("input", searchDocuments);
+
+        function searchDocuments() {
+
+            const keyword = search.value.toLowerCase().trim();
+
+            const results = document.getElementById("results");
+
+            results.innerHTML = "";
+
+            // Empty search
+            if (keyword === "") {
+                return;
+            }
+
+            let found = false;
+
+            documents.forEach(doc => {
+
+                if (doc.name.toLowerCase().includes(keyword)) {
+
+                    found = true;
+
+                    results.innerHTML += `
+<div class="result-card">
+
+    <img src="${doc.image}" width="80">
+
+    <h4>${doc.name}</h4>
+
+    <p>$${doc.price}</p>
+
+</div>
+`;
+
+                }
+
+            });
+
+            if (!found) {
+
+                results.innerHTML = `
+            <div class="result-card">
+                None found
+            </div>
+        `;
+
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

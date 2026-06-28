@@ -16,6 +16,21 @@
             margin: 0;
         }
 
+
+        #results {
+            width: 300px;
+        }
+
+        .result-card {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+        }
+        .result-card:hover{
+            cursor: pointer;
+        }
+
         .quantity-box {
             display: inline-flex;
             border: 1px solid #ccc;
@@ -126,15 +141,14 @@
                                             style="margin: 0 10px 0 10px; font-size: larger;">Techniques</a>
                                     </li>
                                 </ul>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search"
-                                        placeholder="Enter keywords to search..." aria-label="Search"
-                                        style="width: 280px;" />
-                                    <button class="btn btn-outline-success" type="submit">Search</button>
-                                </form>
+                                <input type="text" id="search" placeholder="Search products..." style="width: 300px; padding: 5px; border-radius: 50px; position: relative; border: 1px solid rgb(190, 190, 190);height: 40px;">
+
+                                <br><br>
+
+                                <div id="results" style="padding: 10px; position: absolute;top:70px;right: 250px;z-index: 3;"></div>
 
                                 <img id="account-btn" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png"
-                                    style="margin-left:32px ;width:45px;cursor:pointer;">
+                                    style="margin-left:80px ;width:45px;cursor:pointer;">
 
                             </div>
                     </div>
@@ -144,22 +158,25 @@
 
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            <div class="carousel-item active">
+            <a href="./accessories.html"><div class="carousel-item active">
                 <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/1320w/carousel/371/JOOLA-FUNK-2.jpg?c=1"
                     class="d-block w-100" alt="...">
-            </div>
+            </div></a>
+            <a href="./accessories.html">
             <div class="carousel-item">
                 <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/1320w/carousel/368/sParms_slider.jpg?c=1"
                     class="d-block w-100" alt="...">
-            </div>
+            </div></a>
+            <a href="./accessories.html">
             <div class="carousel-item">
                 <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/1320w/carousel/370/SQAIRZ_slider.jpg?c=1"
                     class="d-block w-100" alt="...">
-            </div>
+            </div></a>
+            <a href="./offensive.html">
             <div class="carousel-item">
                 <img src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/1400w/carousel/361/new-in-march_1.png?c=1"
                     class="d-block w-100" alt="...">
-            </div>
+            </div></a>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
             data-bs-slide="prev">
@@ -214,9 +231,9 @@
         </div>
     </div>
 
-    <img style="margin: 20px 0 20px 0;" class="d-block w-100"
+    <a href="./defensive.html"><img style="margin: 20px 0 20px 0;" class="d-block w-100"
         src="https://cdn11.bigcommerce.com/s-tl5mxjzfsl/images/stencil/original/image-manager/joola-prov-engergy-unlocked.png?t=1776701239"
-        alt="" style="height: 1fr; width: 1fr;">
+        alt="" style="height: 1fr; width: 1fr;"></a>
 
     <h2 style="display: flex;align-items: center;justify-content: center;margin: 40px;">Popular brands</h2>
 
@@ -571,6 +588,84 @@
 
         <script type="module" src="./firebase-config.js"></script>
         <script type="module">
+import { db } from "./firebase-config.js";
+        import {
+            collection,
+            addDoc,
+            getDocs,
+            getDoc,
+            doc
+        } from
+            "https://www.gstatic.com/firebasejs/12.12.0/firebase-firestore.js";
+
+        const documents = [];
+
+const snapshot = await getDocs(collection(db, "products"));
+
+snapshot.forEach(docSnap => {
+
+    documents.push({
+        id: docSnap.id,
+        ...docSnap.data()
+    });
+
+});
+        const search = document.getElementById("search");
+
+        search.addEventListener("input", searchDocuments);
+
+        function searchDocuments() {
+
+            const keyword = search.value.toLowerCase().trim();
+
+            const results = document.getElementById("results");
+
+            results.innerHTML = "";
+
+            if (keyword === "") {
+                return;
+            }
+
+
+            let count = 0;
+
+    documents.forEach(doc => {
+
+    if (
+        doc.name.toLowerCase().includes(keyword)
+        && count < 5
+    ) {
+
+        count++;
+
+        results.innerHTML += `
+<div class="result-card"
+     onclick="goToProduct('${doc.id}')"
+     style="background-color: rgb(190,190,190); width:400px; cursor:pointer;">
+
+    <img src="${doc.image}" width="80">
+
+    <h4>${doc.name}</h4>
+
+    <p>$${doc.price}</p>
+
+</div>
+`;
+    }
+
+});
+
+    if (count === 0) {
+
+        results.innerHTML = `
+            <div class="result-card">
+                None found
+            </div>
+        `;
+    }
+}
+</script>
+<script type="module">
 
             window.increase1 = function () {
                 const input = document.getElementById("quantity1");
